@@ -8,6 +8,7 @@ import Button from '@material-ui/core/Button';
 import ShoppingCartIcon from '@material-ui/icons/ShoppingCart';
 import { connect } from "react-redux";
 import "./Navbar.css";
+import { LocalConvenienceStoreTwoTone } from "@material-ui/icons";
 const useStyles = makeStyles((theme) => ({
     root: {
       flexGrow: 1,
@@ -19,7 +20,7 @@ const useStyles = makeStyles((theme) => ({
         position:"relative"
     }
   }));
-function Navbar2({cart=[]}) {
+function Navbar2({cart}) {
     const classes = useStyles();
     const [cartCount, setCartCount] = useState(0);
 
@@ -50,5 +51,10 @@ function Navbar2({cart=[]}) {
       </div>
     )
 }
+const mapStateToProps=(state)=>{
+  return {
+    cart:state.cart
 
-export default Navbar2;
+  }
+}
+export default connect(mapStateToProps)(Navbar2);
