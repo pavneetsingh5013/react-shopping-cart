@@ -1,42 +1,38 @@
-import smartphone from './smartphone.jpg'
-import book from './book.jpg'
-import speaker from './speaker.jpg'
+import iphone13 from './iphone13.jpg'
+import macbook from './macbook.jpg'
+import asustuf from './asustuf.jpg'
 import * as actionTypes from './Actions'
 
 const intialState={
     products:[
         {
         id: 1,
-        title: "Smartphone",
+        title: "iPhone 13 (128 GB) (RED)",
         description:
-          `This smartphone is not just a sight to behold but also comes equipped with innovative features
-           that will keep you productive and entertained. Its Helio G85 Gaming Processor ensures that you stay
-            on top of the leaderboard while gaming. Its 16.5 cm (6.5) Mini-drop Fullscreen ensures an immersive
-             experience while gaming, streaming content, and more. `,
-        price: 20000,
-        image:smartphone,
+          `iPhone 13 boasts super-fast performance and power efficiency with A15 Bionic, longer battery life, a brighter Super Retina XDR display that brings content to life, incredible durability with the Ceramic Shield front cover, double the entry-level storage at 128GB, an industry-leading IP68 rating for water resistance, and an advanced 5G experience.
+          `,
+        price: 68000,
+        image:iphone13,
       },
       {
         id: 2,
-        title: "Bluetooth Speaker",
+        title: "ASUS TUF F15",
         description:
-            `With the Bluetooth speaker, you can enjoy motivational, dance, or instrumental music whenever you want. 
-          It ensures an immersive listening experience with its 52 mm full-range driver so that you can stay entertained
-           wherever you are. With an IPX7 rating, it ensures water resistance so that you can listen to music by
-            the poolside without a worry in the world.`,
-        price: 999.0,
-        image:speaker,
+            `Geared for serious gaming and real-world durability, the TUF Gaming F15 is a fully-loaded Windows 10 gaming laptop that can carry you to victory. Powered by the latest 10th Gen Intel Core CPU and GeForce GTX 1650 GPU, action-packed gameplay is fast, fluid, and fully saturates speedy IPS-level displays up to 144Hz.
+
+            `,
+        price: 57000.0,
+        image:asustuf,
       },
       {
         id: 3,
-        title: "Book",
+        title: "MACBOOK AIR M2",
         description:
-          `The land of Meluha is an empire created by Lord Rama, and it is ruled by the Suryavanshis. This empire 
-          is powerful and proud, however, the Saraswati river that is their source of water is slowing drying up. 
-          On top of that, the empire is at war with the Chandravanshis who have allied with The Nagas, a group of 
-          sinister and deformed human beings who have extraordinary martial art skills.`,
-        price: 250.0,
-        image:book
+          `Apple MacBook Air (M2, 2022) is a macOS laptop with a 13.60-inch display.
+           It is powered by a Apple M2 processor and it comes with 8GB of RAM.
+           The Apple MacBook Air (M2, 2022) packs 256GB of SSD storage.`,
+        price: 119000.0,
+        image:macbook
       },
     ],
     currentItem:null,
@@ -59,7 +55,21 @@ const ShopReducer=(state=intialState,action)=>{
           ...state,
           currentItem:action.payload.item
         }
+        case actionTypes.UPDATE_QTY:
+          return {
+            ...state,
+            cart: 
+            state.cart.map((product)=>product.id==action.payload.id?{...product,qty:action.payload.qty}:product)
+          }
+          case actionTypes.REMOVE_FROM_CART:
+            return{
+              ...state,
+              cart:state.cart.filter((product)=>product.id!=action.payload.id)
+            }
+          
+
         default : return state
+
       }
     return state;
 }

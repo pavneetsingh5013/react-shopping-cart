@@ -2,15 +2,11 @@ import React from "react";
 import styles from "./SingleItem.css";
 import Button from '@material-ui/core/Button';
 import { connect } from "react-redux";
-// import { addToCart } from "../../redux/Shopping/shopping-actions";
 import ShoppingCartOutlinedIcon from '@material-ui/icons/ShoppingCartOutlined';
 import { ADD_TO_CART } from "../../redux/Actions";
 import * as actionTypes from '../../redux/Actions'
-// const SingleItem = ({ current, addToCart }) => {
 const SingleItem = ({current,addToCart}) => {
-  // console.log(props.location);
-  // const current=props.location.state
-   
+  
   return (
     <div className="s-container">
       <div className='img-container'>

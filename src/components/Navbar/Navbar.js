@@ -35,12 +35,12 @@ function Navbar2({cart}) {
   
     return (
         <div className={classes.root}>
-        <AppBar style={{backgroundColor:'#badc58'}} position="static">
+        <AppBar style={{backgroundColor:'#F48FB1'}} position="static">
           <Toolbar className={classes.tool}>
             
             <Typography variant="h6" className={classes.title}>
               <Link to='/' style={{color:'#2f3542'}}>
-              Redux Shopping
+              ElectronicsCart.com
               </Link>
             </Typography>
             <Link to='/cart' style={{color:'#2f3542'}}>
