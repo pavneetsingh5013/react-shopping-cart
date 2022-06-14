@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/react-shopping-cart/static/css/main.2588079e.css",
+    "main.js": "/react-shopping-cart/static/js/main.904ba159.js",
+    "static/media/smartphone.jpg": "/react-shopping-cart/static/media/smartphone.63eee34bae1ff572bd28.jpg",
+    "static/media/book.jpg": "/react-shopping-cart/static/media/book.8b7b88b32dce8a011ce4.jpg",
+    "static/media/asustuf.jpg": "/react-shopping-cart/static/media/asustuf.de4f48b2916d37e1f784.jpg",
+    "static/media/macbook.jpg": "/react-shopping-cart/static/media/macbook.f1ff9a4990b9b316e426.jpg",
+    "static/media/airm1.jpg": "/react-shopping-cart/static/media/airm1.faf91618710a9b675b78.jpg",
+    "static/media/redmi10s.jpg": "/react-shopping-cart/static/media/redmi10s.5b7ebe824d290d5ad03c.jpg",
+    "static/media/iphone13.jpg": "/react-shopping-cart/static/media/iphone13.95e0545c5b291920bcc4.jpg",
+    "static/media/speaker.jpg": "/react-shopping-cart/static/media/speaker.e5091a1daa8dbb6ac31e.jpg",
+    "static/media/smasungf22.jpg": "/react-shopping-cart/static/media/smasungf22.67e52064a59967ece5d1.jpg",
+    "index.html": "/react-shopping-cart/index.html",
+    "main.2588079e.css.map": "/react-shopping-cart/static/css/main.2588079e.css.map",
+    "main.904ba159.js.map": "/react-shopping-cart/static/js/main.904ba159.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.2588079e.css",
+    "static/js/main.904ba159.js"
+  ]
+}
