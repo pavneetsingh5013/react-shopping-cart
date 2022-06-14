@@ -8,6 +8,7 @@ import * as actionTypes from '../../redux/Actions'
 const SingleItem = ({current,addToCart}) => {
   
   return (
+    <div className="itemwrapper">
     <div className="s-container">
       <div className='img-container'>
       <img
@@ -32,6 +33,8 @@ const SingleItem = ({current,addToCart}) => {
         </Button>
       </div>
     </div>
+    </div>
+
   );
 };
 const mapStateToProps=(state)=>{

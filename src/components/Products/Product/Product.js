@@ -15,11 +15,13 @@ import * as actionTypes from '../../../redux/Actions'
 const useStyles = makeStyles({
     root: {
       maxWidth: 345,
-      marginBottom:'5%'
+      marginBottom:'3%',
+      
     },
     media: {
       height: '40vh',
     },
+    
   });
 
 function Product2({ product, addToCart, loadCurrentItem }) {
@@ -32,7 +34,7 @@ function Product2({ product, addToCart, loadCurrentItem }) {
       
     }
     return (
-        <Card className={classes.root}>
+        <Card variant='outlined' className={classes.root}>
       
           <CardMedia
             className={classes.media}
@@ -44,11 +46,14 @@ function Product2({ product, addToCart, loadCurrentItem }) {
             <Typography gutterBottom variant="h5" component="h2">
               {product.title}
             </Typography>
-            <Typography variant="body2" color="textSecondary" component="p" style={{height: '26vh'}}>
+            <div style={{overflow:'auto'}}>
+            <Typography variant="body2" color="textSecondary" component="p" style={{height: '20vh',fontSize:'12px'}}>
               {product.description}
             </Typography>
-            <br/>
-            <Typography variant="h5" align='center' color="textPrimary" >
+            </div>
+            
+            
+            <Typography variant="h6" align='center' color="textPrimary" >
               {product.price}&nbsp;₹
             </Typography>
           </CardContent>
@@ -63,7 +68,9 @@ function Product2({ product, addToCart, loadCurrentItem }) {
             Add to Cart
           </Button>
         </CardActions>
+       
       </Card>
+      
     )
 }
 const mapDispatchToProps=(dispatch)=>{
