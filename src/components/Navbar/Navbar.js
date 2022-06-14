@@ -34,18 +34,24 @@ function Navbar2({cart}) {
     }, [cart, cartCount]);
   
     return (
-        <div className={classes.root}>
-        <AppBar style={{backgroundColor:'#F48FB1'}} position="static">
+        <div className={classes.root} >
+        <AppBar  style={{color:'#023e7a'}} position="static">
           <Toolbar className={classes.tool}>
             
             <Typography variant="h6" className={classes.title}>
-              <Link to='/' style={{color:'#2f3542'}}>
-              ElectronicsCart.com
+              <Link to='/' style={{color:'white'}}>
+              ElectronicsCart
               </Link>
             </Typography>
-            <Link to='/cart' style={{color:'#2f3542'}}>
-            <Button color="inherit">Cart<ShoppingCartIcon style={{marginLeft:'12%', marginRight:'1%'}}/><span className='cartNumber' style={{}}>{cartCount}</span></Button>
+            
+
+            
+            <Link to='/cart' style={{color:'white'}}>
+            <Button color="inherit">CART<ShoppingCartIcon style={{marginLeft:'12%', marginRight:'1%'}}/><span className='cartNumber' style={{}}>{cartCount}</span></Button>
             </Link>
+            
+
+            
           </Toolbar>
         </AppBar>
       </div>
