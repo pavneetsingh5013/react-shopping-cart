@@ -16,7 +16,7 @@ import SingleItem from "./components/SingleItem/SingleItem";
 
 function App({ current }) {
   return (
-    <Router>
+    // <Router>
       <div className="app">
         <Navbar />
         <Switch>
@@ -30,7 +30,7 @@ function App({ current }) {
           {/* <Route exact path="/product/:id" component={SingleItem}/> */}
         </Switch> 
       </div>
-    </Router>
+    // </Router>
   );
 }
 const mapStateToProps=(state)=>{
